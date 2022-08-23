@@ -82,6 +82,7 @@
     }
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/diwotech"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   }
 }
