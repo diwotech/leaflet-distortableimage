@@ -8,3 +8,4 @@ package-lock.json
 dist/*
 !dist/leaflet.distortableimage.css
 !dist/leaflet.distortableimage.js
+.npmrc
