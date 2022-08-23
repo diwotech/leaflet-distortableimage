@@ -32,6 +32,7 @@ L.DistortableImageOverlay = L.ImageOverlay.extend({
       if (map.options.zoomAnimation && L.Browser.any3d) {
         map.on('zoomanim', this._animateZoom, this);
       }
+      this._animateZoomReplacement();
     }
 
     // Have to wait for the image to load because need to access its w/h
@@ -52,6 +53,7 @@ L.DistortableImageOverlay = L.ImageOverlay.extend({
         if (map.options.zoomAnimation && L.Browser.any3d) {
           map.on('zoomanim', this._animateZoom, this);
         }
+        this._animateZoomReplacement();
       }
 
       /** if there is a featureGroup, only its editable option matters */
@@ -477,6 +479,11 @@ L.DistortableImageOverlay = L.ImageOverlay.extend({
     image._leaflet_pos = topLeft;
 
     image.style[L.DomUtil.TRANSFORM] = [translation, warp].join(' ');
+  },
+
+  _animateZoomReplacement: function _animateZoomReplacement() {
+    const event = {'zoom': this._map.getZoom(), 'center': this._map.getCenter()};
+    this._animateZoom(event);
   },
 
   getCorners: function() {
