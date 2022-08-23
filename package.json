@@ -82,6 +82,6 @@
     }
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@alexey-khabarov"
+    "registry": "https://npm.pkg.github.com/diwotech"
   }
 }
