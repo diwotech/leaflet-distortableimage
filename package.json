@@ -1,6 +1,6 @@
 {
   "name": "@diwotech/leaflet-distortableimage",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "engines": {
     "node": ">=10.0.0"
